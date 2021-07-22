@@ -10,13 +10,21 @@
  **/
 
 #include <iostream>
-
+#include <string>
 using namespace std; 
 
-//General outline 
-//Determine if the entered credit card length is valid or not
-//Take every other digit starting from back and multiply by 2
-//If any result is greater than 10 add the two numbers 
-//Add the new numbers with the remaining numbers you skipped over 
-//Take sum and perform modulo 10. If the result is even, the credit
-//card is valid 
+int main() { 
+    //Prompt the user to enter the credit card number they want to have validated
+    //and store the value in long long int credit_card
+    cout << "Please enter the credit card number you would like to validate: "; 
+    long long int credit_card {}; 
+    cin >> credit_card; 
+
+    //Find the length of the credit card, then loop over the card starting from the 
+    //second to last digit, multiplying each value by 2. 
+
+
+    //Step 5- Take the sum and modulo 10, if it has a remainder the credit/debit card is invalid
+    //Step 6- Return whether the credit card is valid or not 
+
+}
