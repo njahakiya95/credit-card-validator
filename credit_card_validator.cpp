@@ -13,18 +13,39 @@
 #include <string>
 using namespace std; 
 
-int main() { 
-    //Prompt the user to enter the credit card number they want to have validated
-    //and store the value in long long int credit_card
-    cout << "Please enter the credit card number you would like to validate: "; 
-    long long int credit_card {}; 
-    cin >> credit_card; 
+void validate_card(const string card_number) {
+    //Find the length of the credit card 
+    int card_length = card_number.length(); 
 
-    //Find the length of the credit card, then loop over the card starting from the 
-    //second to last digit, multiplying each value by 2. 
+    //Even_sum holds the value of the even digit summation
+    int even_sum {}; 
 
+    //Odd_sum holds the value of the odd digit summation 
+    int odd_sum {}; 
 
-    //Step 5- Take the sum and modulo 10, if it has a remainder the credit/debit card is invalid
-    //Step 6- Return whether the credit card is valid or not 
+    //Loop over card_number and multiply every even digit by 2. 
+    //If the result is over 10, add both digits. Take the sum of
+    //all of the numbers 
+    for (int i = card_length - 2; i >= 0; i = i -2) {
+        int doubled_value = (card_number[i] - 48) * 2; 
+        if (doubled_value > 9) {
+            doubled_value = (doubled_value / 10) + (doubled_value % 10); 
+        }
+        even_sum += doubled_value; 
+    }
 
+    for (int i = card_length - 1; i >= 0; i = i -2) {
+        odd_sum += card_number[i] - 48; 
+    }
+    
+    //Total_sum is the summation of both the above operations 
+    int total_sum = even_sum + odd_sum; 
+
+    //Output result of Luhn's Algorithm
+    cout << (total_sum % 10 == 0 ? "This credit card is valid!" : "This credit card is invalid!") << endl; 
+}      
+
+int main(){
+    string card_name = "4003600000000014"; 
+    validate_card(card_name); 
 }
