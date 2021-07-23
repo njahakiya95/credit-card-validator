@@ -46,6 +46,11 @@ void validate_card(const string card_number) {
 }      
 
 int main(){
-    string card_name = "4003600000000014"; 
-    validate_card(card_name); 
+    //Prompt the user to enter a credit card number and store the value in card_number
+    cout << "Enter the credit card number you would like to validate: " << "\n"; 
+    string card_number {}; 
+    cin >> card_number; 
+
+    //
+    validate_card(card_number); 
 }
