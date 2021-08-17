@@ -46,12 +46,13 @@ void validate_card(const string card_number) {
     cout << (total_sum % 10 == 0 ? "This credit card is valid!" : "This credit card is invalid!") << endl; 
 }      
 
+//Driver code
 int main(){
     //Prompt the user to enter a credit card number and store the value in card_number
     cout << "Enter the credit card number you would like to validate: " << "\n"; 
     string card_number {}; 
     cin >> card_number; 
 
-    //
+    //Run user input number through validate_card function
     validate_card(card_number); 
 }
