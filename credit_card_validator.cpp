@@ -34,6 +34,7 @@ void validate_card(const string card_number) {
         even_sum += doubled_value; 
     }
 
+    //Convert the card number from string to int by subtracting its ASCII equivalent 
     for (int i = card_length - 1; i >= 0; i = i -2) {
         odd_sum += card_number[i] - 48; 
     }
