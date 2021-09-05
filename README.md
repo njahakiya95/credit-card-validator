@@ -24,4 +24,4 @@ researcher at IBM. The algorithm works as described below:
         The last digit in 20 is 0. So, the Visa number is correct.
 
 The code was written using C++ and run in Visual Studio Code IDE, but should be 
-able to be run in any environment. Unit testing was done using Google Test. 
+able to be run in any environment. Unit testing was done using 
