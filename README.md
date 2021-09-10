@@ -1,8 +1,8 @@
-# credit-card-validator
+# Credit Card Validator
 
-credit-card-validator uses Luhn's Algorithm, also known as Modulus 10 Algorithm to 
-determine whether or not the credit card number entered by the user via the
-command line is valid or not. It was developed by Hans Peter Luhn while he was a 
+this project uses Luhn's Algorithm, also known as Modulus 10 Algorithm to 
+determine whether or not a credit card number entered by the user via the
+command line is valid or not. Luhn's Algorithm was developed by Hans Peter Luhn while he was a 
 researcher at IBM. The algorithm works as described below:
 
 1. Multiply the digits from the back, starting from the second-to-last. Skip one number, double the next until you’re now on the first number. 
